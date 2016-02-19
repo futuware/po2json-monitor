@@ -1,0 +1,7 @@
+version: '2'
+services:
+  po2json:
+    build: .
+    volumes:
+      - .:/application
+      - "$DIR:/messages/"
