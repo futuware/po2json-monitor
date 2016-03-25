@@ -8,7 +8,7 @@ const outputFileName = '/messages/messages.json';
 
 chokidar.watch(inputFileName, {}).on('change', function(path) {
     console.log('File ' + inputFileName + ' changed, converting to json');
-    po2json.parseFile(path, { format: 'jed' }, function(err, jsonData) {
+    po2json.parseFile(path, { format: 'jed1.x' }, function(err, jsonData) {
         console.log('Converted successfully, saving as ' + outputFileName);
         jsonfile.writeFile(outputFileName, jsonData, { spaces: 2 }, function(err) {
             if (err) {
