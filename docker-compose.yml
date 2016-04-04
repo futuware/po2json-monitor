@@ -2,6 +2,8 @@ version: '2'
 services:
   po2json:
     build: .
+    environment:
+      FILTER_EXTENSIONS: js,html
     volumes:
       - .:/application
       - "$DIR:/messages/"
